@@ -1,7 +1,6 @@
+import './App.css'
 import { useState } from 'react'
 import MoleContainer from './MoleContainer'
-import EmptySlot(props) from './EmptySlot'
-import Mole(props) from './Mole'
 
 function App(){
     let [score, setScore] = useState(0)
@@ -13,7 +12,8 @@ function App(){
                 <MoleContainer
                 key={i}
                 setScore={setScore}
-                score={score} />
+                score={score}
+                />
             )
         }
     

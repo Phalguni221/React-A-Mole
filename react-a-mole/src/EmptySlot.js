@@ -1,9 +1,12 @@
 import {useEffect} from 'react'
-import moleImg from '../images/mole.png'
+
+import moleImg from './mole.png'
+
+import moleHill from './molehill.png'
 
 
 //useEffect hook for Timer and Reset Timer
-function EmptySlot(props){
+const EmptySlot = (props) => {
         useEffect(() => {
             // Feel free to adjust this number as you see fit.
             // It is your game to tune!
@@ -13,12 +16,10 @@ function EmptySlot(props){
             }, randSeconds)
             return () => clearTimeout(timer)
         })
-    
+
         return (
             <div>
-                <img style={{'width': '30vw'}}
-                src={moleImg}
-                onClick={props.handleClick} />
+                <img style={{'width': '30vw'}} src={moleHill} />
             </div>
         )
     }
